@@ -1,10 +1,15 @@
-const displayDiv = (selection) => {
-  let divId = document.getElementById(selection);
-  divId.hidden = !divId.hidden;
+let alphaDiv;
+
+const showHide = (selection) => {
+  if(alphaDiv) {
+    alphaDiv.classList.remove('show');
+  }
+  alphaDiv = selection;
+  alphaDiv.classList.add('show');
 }
 
-nav.onclick = (e) =>{
-  let selected = e.target.innerHTML.toLowerCase(); 
-  displayDiv(selected);
-
+nav.onclick = (e) => {
+  let id = e.target.innerHTML.toLowerCase(); 
+  let selected = document.getElementById(id);
+  showHide(selected);
 }
