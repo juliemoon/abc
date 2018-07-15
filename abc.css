@@ -12,3 +12,11 @@ body {
 h1 {
   color: mistyrose;
 }
+
+.hideDiv {
+  display : none;
+}
+
+.show {
+  display : block;
+}
