@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -8,6 +9,44 @@ html {
 body {
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-column: 1 / -1;
+  background-color: #386782;
+  color: #f9eebb;
+}
+
+main {
+  grid-column: 1 / -1;
+  grid-row: 2 / 4;
+  max-width: 1000px;
+}
+
+footer {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+}
+
+.hideDiv {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+}
+main p {
+  border:1px solid red;
+  /* grid-column: 1/2; */
+}
+
+main figure {
+  border:1px solid blue;
+  /* grid-column: 2/3 */
 }
 h1 {
   color: mistyrose;
